@@ -37,3 +37,16 @@ app.put('/aluguel/:id', atualizarAluguel)
 
 const deletarAluguel = require('./alugueis/deletarAluguel')
 app.delete('/aluguel/:id', deletarAluguel)
+
+
+const criarEstudante = require ('./estudantes/adicionarEstudante')
+app.post('/estudantes', 'criarEstudante')
+
+const listarEstudantes = require ('./estudantes/listarEstudante')
+app.get('/estudantes', 'listarEstudantes')
+
+const atualizarEstudante = require ('./estudantes/atualizarEstudante')
+app.put('/estudantes', 'atualizarEstudante')
+
+const deletarEstudante = require ('./estudantes/deletarEstudante')
+app.delete('/estudante', 'deletarEstudante')
