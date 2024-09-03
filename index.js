@@ -12,7 +12,7 @@ app.listen(port, () => {
 })
 
 // rotas para os livros 
-const adicionarLivro = require('./livro/adicionarLivro')
+/*const adicionarLivro = require('./livro/adicionarLivro')
 app.post('/livro', adicionarLivro)
 
 const listarLivros = require('./livro/listarLivros')
@@ -23,3 +23,17 @@ app.put('/livro/:id', atualizarLivro)
 
 const deletarLivro = require('./livro/deletarLivro')
 app.delete('/livro/:id', deletarLivro)
+*/
+
+//rotas para os alugueis
+const criarAluguel = require('./alugueis/criarAluguel')
+app.post('/aluguel', criarAluguel)
+
+const listarAlugueis = require('./alugueis/listarAlugueis')
+app.get('/aluguel', listarAlugueis)
+
+const atualizarAluguel = require('./alugueis/atualizarAluguel')
+app.put('/aluguel/:id', atualizarAluguel)
+
+const deletarAluguel = require('./alugueis/deletarAluguel')
+app.delete('/aluguel/:id', deletarAluguel)
