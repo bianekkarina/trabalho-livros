@@ -11,6 +11,10 @@ let aluguel = [
         dataDevolucao: '12/09/2024'
     }
 ]
+let estudantes = [
+    {id: 1, nome: 'kailane', matricula: 65437, curso: 'Contabilidade', ano: 2023}
+]
 
 
-module.exports = { livros,aluguel }
+
+module.exports = { livros,aluguel,estudantes}
