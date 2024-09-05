@@ -50,6 +50,12 @@ app.put('/aluguel/:id', atualizarAluguel)
 const deletarAluguel = require('./alugueis/deletarAluguel')
 app.delete('/aluguel/:id', deletarAluguel)
 
+const buscarIdLivro = require('./alugueis/buscarIdLivro')
+app.get('/aluguel/IdLivro', buscarIdLivro)
+
+const buscarIdEstudante = require('./alugueis/buscarIdEstudante')
+app.get('/aluguel/idEstudante', buscarIdEstudante)
+
 // rotas para os estudantes
 const criarEstudante = require ('./estudantes/adicionarEstudante')
 app.post('/estudantes', criarEstudante)
@@ -71,4 +77,3 @@ app.get('/estudantes/nome', buscarNome)
 
 const buscarCurso = require('./estudantes/buscarCurso')
 app.get('/estudantes/curso', buscarCurso)
-
