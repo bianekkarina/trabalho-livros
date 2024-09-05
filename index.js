@@ -36,3 +36,29 @@ app.get('/livro/genero', buscarGenero)
 
 const buscarAno = require('./livro/buscarAno')
 app.get('/livro/ano', buscarAno)
+
+//rotas para os alugueis
+const criarAluguel = require('./alugueis/criarAluguel')
+app.post('/aluguel', criarAluguel)
+
+const listarAlugueis = require('./alugueis/listarAlugueis')
+app.get('/aluguel', listarAlugueis)
+
+const atualizarAluguel = require('./alugueis/atualizarAluguel')
+app.put('/aluguel/:id', atualizarAluguel)
+
+const deletarAluguel = require('./alugueis/deletarAluguel')
+app.delete('/aluguel/:id', deletarAluguel)
+
+// rotas para os estudantes
+const criarEstudante = require ('./estudantes/adicionarEstudante')
+app.post('/estudantes', 'criarEstudante')
+
+const listarEstudantes = require ('./estudantes/listarEstudante')
+app.get('/estudantes', 'listarEstudantes')
+
+const atualizarEstudante = require ('./estudantes/atualizarEstudante')
+app.put('/estudantes', 'atualizarEstudante')
+
+const deletarEstudante = require ('./estudantes/deletarEstudante')
+app.delete('/estudante', 'deletarEstudante')

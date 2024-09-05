@@ -3,4 +3,19 @@ livros = [
     { id: 2, titulo: 'Jantar Secreto', autor: 'Raphael Montes', ano: 2016, genero: 'Suspense' }
 ]
 
-module.exports = { livros }
+let aluguel = [
+    {   id: 1,
+        idLivro: 1,
+        idEstudante: 1,
+        dataAluguel: '12/08/2024',
+        dataDevolucao: '12/09/2024'
+    }
+]
+
+let estudantes = [
+    {id: 1, nome: 'kailane', matricula: 65437, curso: 'Contabilidade', ano: 2023}
+]
+
+
+
+module.exports = { livros,aluguel,estudantes}
