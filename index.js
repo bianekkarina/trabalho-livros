@@ -37,3 +37,10 @@ app.put('/aluguel/:id', atualizarAluguel)
 
 const deletarAluguel = require('./alugueis/deletarAluguel')
 app.delete('/aluguel/:id', deletarAluguel)
+
+
+const buscarIdLivro = require('./alugueis/buscarIdLivro')
+app.get('/aluguel/IdLivro', buscarIdLivro)
+
+const buscarIdEstudante = require('./alugueis/buscarIdEstudante')
+app.get('/aluguel/idEstudante', buscarIdEstudante)
