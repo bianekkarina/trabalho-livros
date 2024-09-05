@@ -52,13 +52,19 @@ app.delete('/aluguel/:id', deletarAluguel)
 
 // rotas para os estudantes
 const criarEstudante = require ('./estudantes/adicionarEstudante')
-app.post('/estudantes', 'criarEstudante')
+app.post('/estudantes', criarEstudante)
 
 const listarEstudantes = require ('./estudantes/listarEstudante')
-app.get('/estudantes', 'listarEstudantes')
+app.get('/estudantes', listarEstudantes)
 
 const atualizarEstudante = require ('./estudantes/atualizarEstudante')
-app.put('/estudantes', 'atualizarEstudante')
+app.put('/estudantes', atualizarEstudante)
 
 const deletarEstudante = require ('./estudantes/deletarEstudante')
-app.delete('/estudante', 'deletarEstudante')
+app.delete('/estudante', deletarEstudante)
+
+const buscarNome = require('./estudantes/buscarNome')
+app.get('/estudantes/nome', buscarNome)
+
+const buscarCurso = require('./estudantes/buscarCurso')
+app.get('/estudantes/curso', buscarCurso)
