@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 app.use(express.json())
+const { livros, aluguel, estudante } = require('./data')
 
 app.get('/', (req, res) => {
     res.send('Servidor express está funcionando!')
@@ -23,3 +24,15 @@ app.put('/livro/:id', atualizarLivro)
 
 const deletarLivro = require('./livro/deletarLivro')
 app.delete('/livro/:id', deletarLivro)
+
+const buscarTitulo = require('./livro/buscarTitulo')
+app.get('/livro/titulo', buscarTitulo)
+
+const buscarAutor = require('./livro/buscarAutor')
+app.get('/livro/autor', buscarAutor)
+
+const buscarGenero = require('./livro/buscarGenero')
+app.get('/livro/genero', buscarGenero)
+
+const buscarAno = require('./livro/buscarAno')
+app.get('/livro/ano', buscarAno)
