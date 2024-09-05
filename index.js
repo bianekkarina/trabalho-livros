@@ -65,3 +65,10 @@ app.delete('/estudante', deletarEstudante)
 
 const buscarPorMatricula = require('./estudantes/buscarMatricula')
 app.get('/estudantes/matricula', buscarPorMatricula)
+
+const buscarNome = require('./estudantes/buscarNome')
+app.get('/estudantes/nome', buscarNome)
+
+const buscarCurso = require('./estudantes/buscarCurso')
+app.get('/estudantes/curso', buscarCurso)
+
