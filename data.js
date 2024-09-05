@@ -13,7 +13,8 @@ let aluguel = [
 ]
 
 let estudantes = [
-    {id: 1, nome: 'kailane', matricula: 65437, curso: 'Contabilidade', ano: 2023}
+    {id: 1, nome: 'kailane', matricula: 65437, curso: 'Contabilidade', ano: 2023},
+    {id: 2, nome: 'fnmgj', matricula: 123, curso: 'Contabilidade', ano: 2023}
 ]
 
 
